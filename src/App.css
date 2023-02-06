@@ -1,0 +1,51 @@
+h1 {
+    color: black;
+    text-align: center;
+    margin-top: 50px;
+    
+}
+.input {
+    width: auto;
+    margin-left: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+}
+.button {
+    width: auto;
+    margin-left: 5px;
+    color: black;
+    background-color: aquamarine;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+.listitems{
+    margin-left: auto;
+    margin-top: 25px;
+}
+.Background{
+    background-color: mediumpurple;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    text-align: center;
+    padding-bottom: 10px;
+    border-radius: 10px;
+}
+.displayList{
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 5px 15px 5px 15px;  
+}
+.list {
+    margin-top: 10px;
+    background-color: lightpink;
+    display: flex;
+    width: auto;
+    border-radius: 10px;
+}
+.clr{
+    display: flex
+}
