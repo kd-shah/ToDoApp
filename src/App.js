@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react';
 import {InputView} from './input.js';
 import {Button} from './Button.js';
 import { ToDoItem } from './ListItem.js';
-import styled, { css } from "styled-components";
 import { FaChevronUp } from "react-icons/fa";
 import { FaChevronDown } from "react-icons/fa";
 import { AiFillDelete} from "react-icons/ai";
@@ -24,7 +23,7 @@ export default function TODO() {
     const Add = () => {
         if (newToDoItem !== "") {
             setToDoItem([...ToDoItems, { id: ToDoItems.length , item: newToDoItem }])
-            console.log(ToDoItems);
+            
             setNewToDoItem('')
         }
         else alert("Invalid")   
@@ -48,24 +47,21 @@ export default function TODO() {
     }
 
 
-    const Up = (u) => {
-        const ind = ToDoItems.findIndex(taskitem => taskitem.id === u);
-       /* console.log(ind);*/
+    
 
-        /*ToDoItems[ind] = ToDoItems.splice(ind-1, 1, ToDoItems[ind])[0];*/
-
-        /*let tempObj = ToDoItems.splice(ind, 1, ToDoItems[ind-1])[0];
-        ToDoItems.splice(ind-1, 1, tempObj);*/
-
-        let tempObj = ToDoItems[ind - 1];
-        ToDoItems[ind - 1] = ToDoItems[ind];
-        ToDoItems[ind] = tempObj;
-
-        console.log(ToDoItems[ind]);
+    
+ const Up = (u) => {
+ const ind = ToDoItems.findIndex(taskitem => taskitem.id === u);
+            let tempObj = ToDoItems[ind - 1];
+            ToDoItems[ind - 1] = ToDoItems[ind];
+            ToDoItems[ind] = tempObj;
+        }
+            
+       
 
 
-        setToDoItem(ToDoItems);
-    }
+        
+    
 
 
     const Down = (d) => {
@@ -83,7 +79,7 @@ export default function TODO() {
             ToDoItems[ind] = tempObj;
 
             console.log(ToDoItems[ind]);
-            setNewToDoItem(ToDoItems);        
+            setToDoItem(ToDoItems);        
     }
 
    
@@ -93,7 +89,7 @@ export default function TODO() {
      return (
 
       <>
-       <div className="Background">
+       <div className="background">
         <h1>TODO LIST</h1>
         <InputView
                 className = "input"
