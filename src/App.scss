@@ -1,0 +1,85 @@
+$value-1: 20px;
+$value-w: 500;
+$value-f: 'Cantarell', sans-serif;
+$antique: #FAEBD7;
+$bisque: #FFE4C4;
+$blue-purple: #FED8B1;
+$robin-blue: #BDEDFF;
+@mixin one {
+	font-family: $value-f;
+	border-radius: $value-1/2;
+}
+
+body
+{
+	background-color: $antique;
+}
+
+h1 {
+	font-family: 'Righteous', cursive;
+	font-size: $value-1*2.5;
+	color: black;
+	text-align: center;
+	margin-top: $value-1;
+}
+
+.Background {
+	background-color: #79BAEC;
+	text-align: center;
+	padding-bottom: $value-1/2;
+	border-radius: $value-1/2;
+}
+
+.input {
+	@include one;
+	padding: 5px 10px 5px 10px;
+	margin: 0px 5px 0px 10px;	
+	font-size: $value-1*0.75;
+}
+
+.mainBt {
+	@extend .input;
+	@include one;
+	font-weight: $value-w*1.6;
+	background-color: $bisque;
+
+
+    &:hover {
+	background-color: $blue-purple;
+	-webkit-transform: scale(1.2);
+	-ms-transform: scale(1.2);
+	transform: scale(1.2);
+    }
+}
+
+.list {
+	@include one;
+	display: block;
+	font-size: $value-1;
+	font-weight: $value-w;
+	padding: 5px 2px 5px 2px;
+	background-color: $robin-blue;
+	margin: 10px 30px 0px 30px;
+
+
+    &:hover {
+	    background-color: #C6DEFF;
+	    border: 0.5px solid blue;
+	   -webkit-transform: scale(1.01);
+	   -ms-transform: scale(1.01);
+	   transform: scale(1.01);
+     }
+
+}
+.list1{
+	@extend .list;
+	text-decoration: line-through;
+}
+
+.buttons {
+	height: $value-1;
+	width: $value-1;
+	float: right;
+	margin: 0px 5px 5px 0px;
+	padding: 5px 5px 0px 0px;
+}

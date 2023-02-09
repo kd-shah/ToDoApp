@@ -2,11 +2,11 @@ import PropTypes from 'prop-types';
 
 export const Button = (props) => {
     return (
-        <button className= "button" onClick={props.onClick}>{props.type}</button>
+        <button className="mainBt" onClick={props.onClick}>{props.name} </button>
         );
 }
 
 Button.propTypes = {
-    type : PropTypes.string,
+    name : PropTypes.string,
     onClick : PropTypes.func
 }

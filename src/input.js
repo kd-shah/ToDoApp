@@ -7,7 +7,7 @@ export const InputView = (props) => {
             value={props.value}
             placeholder={props.placeholder}
             onChange={props.onChange}
-            onClear={props.onClear}
+            
         />
     )
 }
@@ -16,5 +16,5 @@ InputView.propTypes = {
     value: PropTypes.string,
     placeholder: PropTypes.string,
     onChange: PropTypes.func,
-    onClear: PropTypes.func
+    clear: PropTypes.func
 }

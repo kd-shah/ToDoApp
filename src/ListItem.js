@@ -4,11 +4,11 @@ export const ToDoItem = (props) =>{
 
     return (
      <>
-        <label className="listitems">
-        <input
-            type="checkbox"
-         />
-            {props.value}
+        <label>
+                <input type="checkbox"/>
+                {props.value}
+               
+                
         </label>   
      </>
         
@@ -18,5 +18,6 @@ export const ToDoItem = (props) =>{
 }
 
 ToDoItem.propTypes = {
-        value: PropTypes.string
+    value: PropTypes.string,
+    
     }
