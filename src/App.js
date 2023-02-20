@@ -5,8 +5,9 @@ import { ToDoForm } from "./Containers/ToDoForm.js";
 export default function TODO() {
   return (
     <>
-      {/* <ToDoForm/> */}
-      <ToDoCreator/>
+      {/* Comment ToDoCreator to use the Form */}
+      {/* <ToDoForm/> */}  
+      <ToDoCreator/>     
     </>
   );
 }
