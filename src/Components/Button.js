@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 export const Button = (props) => {
   return (
     <button className="mainBt" onClick={props.onClick}>
-      {props.name}{" "}
+      {props.name}
     </button>
   );
 };

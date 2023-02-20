@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 import { InputView } from "../Components/InputView.js";
 import { Tasks } from "./Tasks.js";
-import '../Containers/ToDoCreator.scss';
+import '../Containers/ToDoCreator.scss'; //uses same CSS as TodoCreator
 
 export const ToDoForm = () => {
   const [todoItems, settodoItem] = useState([]);

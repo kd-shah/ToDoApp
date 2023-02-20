@@ -12,7 +12,7 @@ export const InputView = (props) => {
         // onChange={props.onChange}
         ref={props.refer} 
       />
-      {/* <button type= "submit">Add</button> */}
+    
 
       
     </>

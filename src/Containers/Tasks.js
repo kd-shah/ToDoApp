@@ -19,7 +19,7 @@ export const Tasks = ({ todos, down, clear, up, onChangeCheckBox }) => {
         <button className="buttons">
           <AiFillDelete className="icons" onClick={() => clear(tasks.id)} />
         </button>
- 
+
         {index === todos.length - 1 && (
           <button disabled className="buttons">
             <FaChevronDown className="icons" onClick={() => down(tasks.id)} />
@@ -45,7 +45,3 @@ export const Tasks = ({ todos, down, clear, up, onChangeCheckBox }) => {
   });
   return <>{tasklist}</>;
 };
-
-
-
-
