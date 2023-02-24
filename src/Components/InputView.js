@@ -1,20 +1,16 @@
 import PropTypes from "prop-types";
 
-
 export const InputView = (props) => {
   return (
     <>
       <input
         id="input"
         className="input"
-        // value={props.value}
+        defaultValue={props.value}
         placeholder={props.placeholder}
         // onChange={props.onChange}
-        ref={props.refer} 
+        ref={props.refer}
       />
-    
-
-      
     </>
   );
 };
