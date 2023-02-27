@@ -68,8 +68,24 @@ export const ToDoCreator = () => {
   };
 
   // Edit Task
+
   const edit = (taskid) => {
     const index = todoItems.findIndex((taskitem) => taskitem.id === taskid);
+    for (let i = 0; i <= todoItems.length - 1; i++) {
+      if (todoItems[i].isEditing === true) {
+        if (
+          window.confirm(
+            "One Task is already being edited. Press OK to edit the new Task."
+          )
+        ) {
+          todoItems[i].isEditing = false;
+          settodoItem([...todoItems]);
+          todoItems[index].isEditing = true;
+        }
+        return;
+      }
+    }
+
     settodoItem([...todoItems]);
     todoItems[index].isEditing = true;
   };
@@ -78,10 +94,12 @@ export const ToDoCreator = () => {
   const saveTask = (taskid) => {
     const index = todoItems.findIndex((taskitem) => taskitem.id === taskid);
     const tempTask = todoItems[index].item;
-    if (editTaskRef.current.value !== "") {
-      todoItems[index].item = editTaskRef.current.value;
-    } else {alert("Invalid");
-    todoItems[index].item = tempTask;}
+    if (editTaskRef.current?.value !== "") {
+      todoItems[index].item = editTaskRef.current?.value;
+    } else {
+      alert("Invalid");
+      todoItems[index].item = tempTask;
+    }
 
     settodoItem([...todoItems]);
     todoItems[index].isEditing = false;
