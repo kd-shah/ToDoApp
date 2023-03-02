@@ -2,11 +2,13 @@ import "./Tasks.scss";
 import { ToDoItem } from "../Components/ToDoItem.js";
 import { Button } from "../Components/Button.js";
 import { IconButton } from "../Components/IconButton";
-import { FaChevronUp } from "react-icons/fa";
-import { FaChevronDown } from "react-icons/fa";
-import { AiFillDelete } from "react-icons/ai";
-import { MdModeEditOutline } from "react-icons/md";
 import { InputView } from "../Components/InputView";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronDown, faChevronUp, faPen, faTrash } from '@fortawesome/free-solid-svg-icons';
+// import { FaChevronUp } from "react-icons/fa";
+// import { FaChevronDown } from "react-icons/fa";
+// import { AiFillDelete } from "react-icons/ai";
+// import { MdModeEditOutline } from "react-icons/md";
 
 export const Tasks = ({
   todos,
@@ -44,7 +46,7 @@ export const Tasks = ({
           className="buttons"
           onClick={() => clear(task.id)}
           title={"Delete Task"}
-          icon={<AiFillDelete className="icons" />}
+          icon={<FontAwesomeIcon icon={faTrash} className="icons" />}
         />
 
         <IconButton
@@ -52,23 +54,25 @@ export const Tasks = ({
           className="buttons"
           onClick={() => down(task.id)}
           title={"Move Task Down"}
-          icon={<FaChevronDown className="icons" />}
+          icon={<FontAwesomeIcon icon={faChevronDown} className="icons" />}
         />
+       
 
         <IconButton
           disabled={index === 0 ? true : false}
           className="buttons"
           onClick={() => up(task.id)}
           title={"Move Task Up"}
-          icon={<FaChevronUp className="icons" />}
+          icon={<FontAwesomeIcon icon={faChevronUp} className="icons" />}
         />
+        
 
         <IconButton
           className="buttons"
           disabled={task.isEditing ? true : false}
           onClick={() => edit(task.id)}
           title={"Edit Task"}
-          icon={<MdModeEditOutline className="icons" />}
+          icon={<FontAwesomeIcon icon={faPen} className="icons" />}
         />
       </div>
     );
