@@ -1,37 +1,17 @@
-import { ToDoCreator } from "./Containers/ToDoCreator.js";
-// import { ToDoForm } from "./Containers/ToDoForm.js";
-
+import LoginForm from "./LoginForm";
+import ToDoCreator from "./Routes/ToDo";
+import { Route, Routes } from "react-router-dom";
 
 export default function TODO() {
   return (
     <>
       {/* Comment ToDoCreator to use the Form */}
       {/* <ToDoForm/>   */}
-      <ToDoCreator/>     
+
+      <Routes>
+        <Route path="/" element={<LoginForm />} />
+        <Route path="/todo" element={<ToDoCreator />} />
+      </Routes>
     </>
   );
 }
-
-
-// Moving Task
-//Alternate methods
-
-    //todoItems[ind] = todoItems.splice(ind+1, 1, todoItems[ind])[0];
-
-    // let tempObj = todoItems.splice(ind, 1, todoItems[ind+1])[0];
-    // todoItems.splice(ind+1, 1, tempObj);
-
-//Changing Task Status
-
-  // const Status = (a) => {
-  //   const ind = todoItems.findIndex((taskitem) => taskitem.id === a);
-
-  //   if (todoItems[ind].isActive === true) {
-  //     todoItems[ind].isActive = false;
-  //   } else {
-  //     todoItems[ind].isActive = true;
-  //   }
-
-  //   todoItems[ind].isActive = todoItems[ind].isActive ? false : true;
-  //   settodoItem([...todoItems]);
-  // };

@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 import { InputView } from "../Components/InputView.js";
-import { Tasks } from "./Tasks.js";
-import '../Containers/ToDoCreator.scss'; //uses same CSS as TodoCreator
+import { Tasks } from "./Tasks.js.js";
+import "./ToDoCreator.scss"; //uses same CSS as TodoCreator
 
 export const ToDoForm = () => {
   const [todoItems, settodoItem] = useState([]);
@@ -26,8 +26,6 @@ export const ToDoForm = () => {
   const clearAll = () => {
     settodoItem([]);
   };
-
-  
 
   //Clear Task
   const clear = (id1) => {
@@ -56,12 +54,6 @@ export const ToDoForm = () => {
       todoItems[ind] = tempObj;
     }
 
-    //Alternate methods
-
-    //todoItems[ind] = todoItems.splice(ind+1, 1, todoItems[ind])[0];
-
-    // let tempObj = todoItems.splice(ind, 1, todoItems[ind+1])[0];
-    // todoItems.splice(ind+1, 1, tempObj);
 
     settodoItem([...todoItems]);
   };
@@ -86,8 +78,10 @@ export const ToDoForm = () => {
             refer={inputRef}
           />
 
-          <button type="submit" className="mainBt">Add</button>
-          <button type="button" className="mainBt" onClick= {clearAll}>
+          <button type="submit" className="mainBt">
+            Add
+          </button>
+          <button type="button" className="mainBt" onClick={clearAll}>
             Clear All
           </button>
         </div>

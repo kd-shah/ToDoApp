@@ -57,7 +57,7 @@ $button-hover-color: rgb(222, 222, 222);
   overflow: hidden;
   text-overflow: ellipsis;
   background-color: $inactive-task-color;
-  text-decoration: line-through;
+  text-decoration: line-through !important;
 
   &:hover {
     @include transition;

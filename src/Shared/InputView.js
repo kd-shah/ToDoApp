@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-export const InputView = (props) => {
+export default function InputView  (props)  {
   return (
     <>
       <input
@@ -8,7 +8,6 @@ export const InputView = (props) => {
         className="input"
         defaultValue={props.value}
         placeholder={props.placeholder}
-        // onChange={props.onChange}
         ref={props.refer}
       />
     </>

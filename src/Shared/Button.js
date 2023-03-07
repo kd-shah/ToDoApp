@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-export const Button = (props) => {
+export default function Button (props) {
   return (
     <button className="mainBt" onClick={props.onClick}>
       {props.name}

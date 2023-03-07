@@ -1,10 +1,10 @@
-import "./ToDoCreator.scss";
+import "./style.scss";
+import  InputView  from "../../Shared/InputView";
+import  Button  from "../../Shared/Button";
+import { Tasks } from "./Components/Tasks";
 import { useState, useRef } from "react";
-import { InputView } from "../Components/InputView.js";
-import { Button } from "../Components/Button.js";
-import { Tasks } from "./Tasks.js";
 
-export const ToDoCreator = () => {
+export default function ToDoCreator() {
   const [todoItems, settodoItem] = useState([]);
 
   const inputRef = useRef("");
@@ -139,19 +139,6 @@ export const ToDoCreator = () => {
       />
     </>
   );
-};
+}
 
-//Alternate methods for swapping
 
-//todoItems[index] = todoItems.splice(index+1, 1, todoItems[index])[0];
-
-// let tempObj = todoItems.splice(index, 1, todoItems[index+1])[0];
-// todoItems.splice(index+1, 1, tempObj);
-
-// Alternate method for changing task status
-
-// if (todoItems[index].isActive === true) {
-//     todoItems[index].isActive = false;
-//      } else {
-//        todoItems[index].isActive = true;
-//      }

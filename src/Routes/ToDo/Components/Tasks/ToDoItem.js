@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
-export const ToDoItem = (props) => {
+
+export default function ToDoItem (props) {
   return (
     <label>
       <input

@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-export const IconButton = (props) => {
+export default function IconButton (props) {
   return (
     <button
       className="buttons"

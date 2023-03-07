@@ -1,12 +1,9 @@
-import "./Tasks.scss";
-import { ToDoItem } from "../Components/ToDoItem.js";
-import { Button } from "../Components/Button.js";
-import { IconButton } from "../Components/IconButton";
-import { InputView } from "../Components/InputView";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faChevronDown, faChevronUp, faPen, faTrash } from '@fortawesome/free-solid-svg-icons';
-import { FaChevronUp } from "react-icons/fa";
-import { FaChevronDown } from "react-icons/fa";
+import "./style.scss";
+import  ToDoItem  from "./ToDoItem";
+import  Button  from "../../../../Shared/Button";
+import  IconButton  from "./IconButton";
+import  InputView  from "../../../../Shared/InputView";
+import { FaChevronUp , FaChevronDown  } from "react-icons/fa";
 import { AiFillDelete } from "react-icons/ai";
 import { MdModeEditOutline } from "react-icons/md";
 
@@ -46,8 +43,7 @@ export const Tasks = ({
           className="buttons"
           onClick={() => clear(task.id)}
           title={"Delete Task"}
-          //icon={<FontAwesomeIcon icon={faTrash} className="icons" />}
-          icon = {<AiFillDelete className="icons"/>}
+          icon={<AiFillDelete className="icons" />}
         />
 
         <IconButton
@@ -55,28 +51,23 @@ export const Tasks = ({
           className="buttons"
           onClick={() => down(task.id)}
           title={"Move Task Down"}
-          //icon={<FontAwesomeIcon icon={faChevronDown} className="icons" />}
-          icon = {<FaChevronDown className="icons"/>}
+          icon={<FaChevronDown className="icons" />}
         />
-       
 
         <IconButton
           disabled={index === 0 ? true : false}
           className="buttons"
           onClick={() => up(task.id)}
           title={"Move Task Up"}
-          //icon={<FontAwesomeIcon icon={faChevronUp} className="icons" />}
-          icon = {<FaChevronUp className="icons"/>}
+          icon={<FaChevronUp className="icons" />}
         />
-        
 
         <IconButton
           className="buttons"
           disabled={task.isEditing ? true : false}
           onClick={() => edit(task.id)}
           title={"Edit Task"}
-          //icon={<FontAwesomeIcon icon={faPen} className="icons" />}
-          icon = {<MdModeEditOutline className="icons"/>}
+          icon={<MdModeEditOutline className="icons" />}
         />
       </div>
     );
